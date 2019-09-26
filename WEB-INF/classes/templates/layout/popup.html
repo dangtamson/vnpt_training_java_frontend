@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout">
+
+<head>
+	<meta charset="utf-8" />
+	<link type="text/css" rel='stylesheet'
+		th:href="@{/public/templates/medic247/vendor/bootstrap/css/bootstrap.min.css}">
+	<link rel="stylesheet" th:href="@{/public/templates/medic247/vendor/slick/slick.css}">
+	<link rel="stylesheet" th:href="@{/public/templates/medic247/vendor/ap8/css/style.css}">
+	<!-- End Bootstrap css -->
+	<!-- Fontawesome css -->
+	<link type="text/css" rel='stylesheet'
+		th:href="@{/public/templates/medic247/vendor/font-awesome/css/font-awesome.min.css}">
+	<!-- End Fontawesome css -->
+
+	<!-- Font Icon Ap css -->
+	<link rel="stylesheet" type="text/css" th:href="@{/public/templates/medic247/css/style.css}">
+	<script type="text/javascript" th:src="@{/public/templates/medic247/vendor/jquery/jquery.2.1.1.min.js}"></script>
+	<script type="text/javascript" th:src="@{/public/templates/medic247/vendor/bootstrap/js/bootstrap.min.js}"></script>
+	<script type="text/javascript" th:src="@{/public/libs/datatable/js/jquery.dataTables.min.js}"></script>
+	<script type="text/javascript" th:src="@{/public/libs/datatable/js/dataTables.bootstrap.js}"></script>
+	<script type="text/javascript" th:src="@{/public/libs/datatable/js/fnAddTr.js}"></script>
+	<script type="text/javascript" th:src="@{/public/libs/select2/select2.min.js}"></script>
+	<script type="text/javascript" th:src="@{/public/libs/jquery-ui-1.12.1.custom/jquery-ui.min.js}"></script>
+	<link th:href="@{/public/libs/bootstrap-datetimepicker/bootstrap-datetimepicker.min.css}" rel="stylesheet"
+		media="screen">
+	<script type="text/javascript" th:src="@{/public/libs/bootstrap-datetimepicker/moment.js}"></script>
+	<script type="text/javascript"
+		th:src="@{/public/libs/bootstrap-datetimepicker/bootstrap-datetimepicker.min.js}"></script>
+	<script type="text/javascript" th:src="@{/public/js/configs/ConfigLabel.js}"></script>
+	<script type="text/javascript" th:src="@{/public/js/configs/ConfigApp.js}"></script>
+	<script type="text/javascript" th:src="@{/public/js/configs/ConfigApi.js}"></script>
+	<script type="text/javascript" th:src="@{/public/js/core/ControlHelper.js}"></script>
+	<script type="text/javascript" th:src="@{/public/js/core/ApiHelper.js}"></script>
+	<script type="text/javascript" th:src="@{/public/js/core/AuthenHelper.js}"></script>
+	<script type="text/javascript" th:src="@{/public/libs/utils/Util.js}"></script>
+	<script type="text/javascript">
+		$(window).ready(function () {
+			$('.wec-control-date').datetimepicker({ locale: 'vi', format: 'DD/MM/YYYY', useCurrent: false });
+			$('.wec-control-datetime').datetimepicker({ locale: 'vi', format: 'DD/MM/YYYY HH:mm:ss', useCurrent: false });
+		});
+	</script>
+	<style>
+		.Popup{
+			padding: 5px;
+			background: #FFF !important;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="Popup">
+		<div layout:fragment="content"></div>
+	</div>
+</body>
+
+</html>

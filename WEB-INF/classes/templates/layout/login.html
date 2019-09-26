@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout">
+
+<head>
+	<title>Song Cong Portal</title>
+    <meta charset="utf-8" />
+    <meta name="keywords" content="medic, medic247" />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible"></meta>
+    <meta content="width=device-width, initial-scale=1" name="viewport" id="viewport"></meta>
+    <meta content="Phần mềm quản lý phòng khám" name="description">
+    <meta content="900" http-equiv="refresh">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible"></meta>
+    <meta content="width=device-width, initial-scale=1" name="viewport" id="viewport"></meta>
+    <meta content="index, follow" name="ROBOTS">
+
+    <<!-- Bootstrap css -->
+	<link type="text/css" rel='stylesheet'
+    th:href="@{/public/templates/medic247/vendor/bootstrap/css/bootstrap.min.css}">
+<link rel="stylesheet" th:href="@{/public/templates/medic247/vendor/slick/slick.css}">
+<link rel="stylesheet" th:href="@{/public/templates/medic247/vendor/ap8/css/style.css}">
+<!-- End Bootstrap css -->
+<!-- Fontawesome css -->
+<link type="text/css" rel='stylesheet' th:href="@{/public/templates/medic247/vendor/font-awesome/css/font-awesome.min.css}">
+<!-- Font Icon Ap css -->
+
+<script type="text/javascript" th:src="@{/public/templates/medic247/vendor/jquery/jquery.2.1.1.min.js}"></script>
+<script type="text/javascript" th:src="@{/public/templates/medic247/vendor/bootstrap/js/bootstrap.min.js}"></script>
+<script type="text/javascript" th:src="@{/public/libs/jquery-ui-1.12.1.custom/jquery-ui.min.js}"></script>
+
+    <link rel="stylesheet" type="text/css" th:href="@{/public/templates/medic247/css/login.css}">
+    <script type="text/javascript" th:src="@{/public/js/configs/ConfigApp.js}"></script>
+    <script type="text/javascript" th:src="@{/public/js/core/ApiHelper.js}"></script>
+    <script type="text/javascript" th:src="@{/public/libs/utils/Util.js}"></script>
+   
+<script>
+    var DATA = ApiHelper.Data;
+    var AUTH = ApiHelper.Authen;
+
+	$(window).ready(function () {
+		var link = document.querySelector("link[rel*='icon']") || document.createElement('link');
+		link.type = 'image/x-icon';
+		link.rel = 'shortcut icon';
+		link.href = 'http://www.stackoverflow.com/favicon.ico';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	})
+</script>
+</head>
+
+<body>
+	<div class="content">
+		<!--  Menu content -->
+		<div layout:fragment="content"></div>
+	</div>
+
+</body>
+
+</html>

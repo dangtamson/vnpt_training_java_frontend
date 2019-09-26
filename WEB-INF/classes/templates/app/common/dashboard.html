@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorator="layout/main">
+
+<head>
+	<meta charset="utf-8" />
+	<title>Chuyên khoa</title>
+</head>
+
+<body>
+	<div layout:fragment="content">
+		<div class="main-content mscrollable">
+			<div class="dashboard-statistics">
+				<div class="row">
+					<div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+						<div class="box">
+							<div class="detail">
+								<span class="number" id="pTongLuotKham">340</span>
+								<span class="txt">Lượt truy cập</span>
+								<div class="status -down">
+									<span class="icon -ap icon-arrow_downward"></span> 0.2%
+								</div>
+							</div>
+							<div class="dashboard-icon">
+								<i class="fa fa-file-o"></i>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+						<div class="box">
+							<div class="detail">
+								<span class="number" id="pTongDangKham">23</span>
+								<span class="txt">Đang khám</span>
+								<div class="status -up">
+									<span class="icon -ap icon-arrow_upward"></span> 0.2%
+								</div>
+							</div>
+							<div class="dashboard-icon">
+								<i class="fa fa-share-square-o"></i>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+						<div class="box">
+							<div class="detail">
+								<span class="number" id="pTongChoThanhToan">13</span>
+								<span class="txt">Chờ thanh toán</span>
+								<div class="status -down">
+									<span class="icon -ap icon-arrow_downward"></span> 0.2%
+								</div>
+							</div>
+							<div class="dashboard-icon">
+								<i class="fa fa-pencil-square-o"></i>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+						<div class="box">
+							<div class="detail">
+								<span class="number" id="pTongHenKham">123</span>
+								<span class="txt">Lượt hẹn khám</span>
+								
+								<div class="status -down">
+									<span class="icon -ap icon-arrow_downward"></span> 0.2%
+								</div>
+							</div>
+							<div class="dashboard-icon">
+								<i class="fa fa-support"></i>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+			<div class="dashboard-chart">
+				<div class="row">
+					<div class="col-sm-6 col-xs-12">
+						<div class="box">
+							<div class="box-head">
+								<div class="pull-left title">Thống kê số lượng bệnh nhân</div>
+								<div class="pull-right">
+									<div class="dropdown select-dropdown">
+										<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+											Theo tháng
+											<span class="caret"></span>
+										</button>
+										<ul class="dropdown-menu dropdown-menu-right">
+											<li><a href="#">Tháng này</a></li>
+											<li><a href="#">Năm nay</a></li>
+											<li><a href="#">Hôm nay</a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="clearfix"></div>
+							   
+							</div>
+							<div class="box-body">
+								<div id="chart-bs" style="height: 300px;"></div>
+							</div>
+	
+						</div>
+					</div>
+					<div class="col-sm-6 col-xs-12">
+						<div class="box">
+							<div class="box-head">
+								<div class="pull-left title">Thống kê doanh số trung tâm</div>
+								<div class="pull-right">
+									<div class="dropdown select-dropdown">
+										<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+											Theo tháng
+											<span class="caret"></span>
+										</button>
+										<ul class="dropdown-menu dropdown-menu-right">
+											<li><a href="#">Tháng này</a></li>
+											<li><a href="#">Năm nay</a></li>
+											<li><a href="#">Hôm nay</a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="clearfix"></div>
+							   
+							</div>
+							<div class="box-body">
+								<div id="chart-line" style="height: 300px;"></div>
+							</div>
+	
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+        
+			$("#chart-line").highcharts({
+	
+				title: {
+					text:null
+				},
+	
+				subtitle: {
+					text: null
+				},
+				xAxis: {
+					categories: [
+						'T1',
+						'T2',
+						'T3'
+					],
+					crosshair: true
+				},
+				yAxis: {
+					title: {
+						text: null
+					}
+				},
+				legend: {
+					layout: 'vertical',
+					align: 'center',
+					verticalAlign: 'bottom'
+				},
+	
+				plotOptions: {
+					series: {
+						label: {
+							connectorAllowed: false
+						}
+					}
+				},
+	
+				series: [{
+					name: 'Bệnh nhân',
+					data: [43934, 52503, 57177]
+				}],
+				credits: {
+					enabled: false
+				},
+	
+			});
+			$("#chart-bs").highcharts({
+				chart: {
+					type: 'column'
+				},
+				title: {
+					text: null,
+				},
+				subtitle: {
+					text: null,
+				},
+				xAxis: {
+					categories: [
+						'2013',
+						'2014',
+						'2015',
+						'2016',
+						'2017'
+					],
+					crosshair: true
+				},
+				yAxis: {
+					min: 0,
+					title: {
+						text: null
+					}
+				},
+				credits: {
+					enabled: false
+				},
+				tooltip: {
+					headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+					pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+						'<td style="padding:0"><b>{point.y:.1f} mm</b></td></tr>',
+					footerFormat: '</table>',
+					shared: true,
+					useHTML: true
+				},
+				plotOptions: {
+					column: {
+						pointPadding: 0,
+						borderWidth: 0
+					}
+				},
+				series: [{
+					name: 'Bác sĩ',
+					data: [49.9, 71.5, 106.4, 129.2, 144.0],
+					color:'#246BBB'
+	
+				}]
+			});
+		</script>
+	</div>
+</body>
+
+</html>

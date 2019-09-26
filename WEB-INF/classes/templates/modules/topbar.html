@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="utf-8" />
+	
+</head>
+
+<body>
+	<div th:fragment="topbar">
+			<script type="text/javascript" th:src="@{/public/js/core/AuthenHelper.js}"></script>
+			<script type="text/javascript" th:src="@{/public/js/modules/topbar.js}"></script>
+			<script type="text/javascript">
+				var oTopBar = new TopBar();
+			</script>
+		<div class="header">
+			<div class="nav-icon">
+				<span class="-ap icon-list2"></span>
+			</div>
+			<div class="timeclock">
+				<span class="-ap icon-access_time icon"></span> <span id="DongHo"></span>
+			</div>
+			<div class="header-right pull-right">
+				<!-- <div class="item -noti">
+							<div class="notify">
+								<span class="icon -ap icon-notifications_none"></span>
+								<span class="status"></span>
+							</div>
+						</div> -->
+				<div class="item -noti -waiting">
+					<div class="notify ">
+						<span class="icon -ap icon-ion-ios-pulse-strong "></span>
+						<div class="num">
+							1
+						</div>
+					</div>
+
+				</div>
+				<div class="item -noti -pay">
+					<div class="notify dropdown">
+						<div class="btn" data-toggle="dropdown">
+							<span class="icon -ap icon-coin-dollar"></span>
+							<div class="num">
+								2
+							</div>
+						</div>
+						<ul class="dropdown-menu dropdown-menu-right">
+							<li><a href="#"></a></li>
+						</ul>
+					</div>
+
+				</div>
+				<div class="item -user" id="UserInfo">
+					<div class="user">
+						<div class="avatar"
+							style="background-image: url(https://cdn.pixabay.com/photo/2016/08/20/05/38/avatar-1606916_960_720.png);">
+						</div>
+						<div class="username">
+							<p class="UserName"></p>
+							<p class="FullName"></p>
+						</div>
+						<div class="down">
+							<span class="icon -ap icon-triangle-down"></span>
+						</div>
+					</div>
+					<ul class="dropdown-menu">
+						<li class="username"></li>
+						<li><a href="#"><span class="fa icon fa-edit icon"></span> Đổi mật khẩu</a></li>
+						<li><a href="#" id="btnSignOut"><span class="fa icon fa-sign-out icon"></span> Thoát</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</body>
+
+</html>

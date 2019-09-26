@@ -1,0 +1,377 @@
+/*Login*/
+/*
+* @Author: uocnv
+* @Date:   2018-03-25 16:02:45
+* @Last Modified by:   uocnv
+* @Last Modified time: 2018-03-25 16:39:42
+*/
+.borderbox {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+.absolute {
+  position: absolute;
+}
+.relative {
+  position: relative;
+}
+.fixed {
+  position: fixed;
+}
+.normal {
+  font-weight: normal;
+}
+.bold {
+  font-weight: bold;
+}
+.tleft {
+  text-align: left;
+}
+.tright {
+  text-align: right;
+}
+.center {
+  text-align: center;
+}
+.justify {
+  text-align: justify;
+}
+.upper {
+  text-transform: uppercase;
+}
+.left,
+.ap-left {
+  float: left;
+}
+.right,
+.ap-right {
+  float: right;
+}
+.pointer {
+  cursor: pointer;
+}
+.italic {
+  font-style: italic;
+}
+.underline {
+  text-decoration: underline;
+}
+.hidden {
+  display: none;
+}
+.xdot {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
+}
+.xo,
+.ap-xo {
+  overflow: hidden;
+}
+.full {
+  width: 100%;
+  height: 100%;
+}
+.fullw {
+  width: 100%;
+}
+.fullh {
+  height: 100%;
+}
+.block {
+  display: block;
+}
+.inline {
+  display: inline-block;
+}
+.cell {
+  display: table-cell;
+}
+.table {
+  display: table;
+}
+.invisible,
+.ap-invisible {
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+.vtop {
+  vertical-align: top;
+}
+.vcenter {
+  vertical-align: middle;
+}
+.vbottom {
+  vertical-align: bottom;
+}
+.f9 {
+  font-size: 9px;
+}
+.f10 {
+  font-size: 10px;
+}
+.f11 {
+  font-size: 11px;
+}
+.f12 {
+  font-size: 12px;
+}
+.f13 {
+  font-size: 13px;
+}
+.f14 {
+  font-size: 14px;
+}
+.f15 {
+  font-size: 15px;
+}
+.f16 {
+  font-size: 16px;
+}
+.f17 {
+  font-size: 17px;
+}
+.f18 {
+  font-size: 18px;
+}
+.f19 {
+  font-size: 19px;
+}
+.f20 {
+  font-size: 20px;
+}
+.f21 {
+  font-size: 21px;
+}
+.f22 {
+  font-size: 22px;
+}
+.f23 {
+  font-size: 23px;
+}
+.f24 {
+  font-size: 24px;
+}
+.f25 {
+  font-size: 25px;
+}
+.f26 {
+  font-size: 26px;
+}
+.f27 {
+  font-size: 27px;
+}
+.f28 {
+  font-size: 28px;
+}
+.f29 {
+  font-size: 29px;
+}
+.f30 {
+  font-size: 30px;
+}
+.f31 {
+  font-size: 31px;
+}
+.f32 {
+  font-size: 32px;
+}
+.thin {
+  font-weight: 300;
+}
+.thick {
+  font-weight: 500;
+}
+.link {
+  color: #1565C0;
+  display: inline-block;
+}
+.link:hover {
+  color: #153673;
+}
+.check-action {
+  position: relative;
+  min-height: 18px;
+}
+.check-action input {
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+  opacity: 0;
+  position: absolute;
+}
+.check-action .name {
+  position: relative;
+  display: block;
+  padding-left: 30px;
+}
+.check-action .name:before {
+  width: 18px;
+  height: 18px;
+  line-height: 16px;
+  border-radius: 0px;
+  text-align: center;
+  display: inline-block;
+  font-family: "ap";
+  border: 1px solid #d4d8dc;
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  vertical-align: middle;
+}
+.check-action input:checked + .name:before {
+  background: #1976D2;
+  color: #fff;
+  border-color: #1976D2;
+  content: "\ea2b";
+  font-size: 10px;
+}
+.check-action input[type="radio"] + .name:before {
+  border-radius: 50%;
+}
+.check-action input[type="radio"]:checked + .name:before {
+  content: "\e6c7";
+  color: #fff;
+  border-color: #1976D2;
+}
+.form-control {
+  border-color: #d4d8dc;
+}
+/*--------Begin Add Font Roboto---------*/
+/* Fonts */
+@font-face {
+  font-family: 'Roboto';
+  src: url('../fonts/Roboto-Light.eot?#iefix') format('embedded-opentype'), url('../fonts/Roboto-Light.woff') format('woff'), url('../fonts/Roboto-Light.ttf') format('truetype'), url('../fonts/Roboto-Light.svg#SFUFutura') format('svg');
+  font-weight: 300;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: url('../fonts/Roboto-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/Roboto-Regular.woff') format('woff'), url('../fonts/Roboto-Regular.ttf') format('truetype'), url('../fonts/Roboto-Regular.svg#SFUFutura') format('svg');
+  font-weight: normal;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: url('../fonts/Roboto-Medium.eot?#iefix') format('embedded-opentype'), url('../fonts/Roboto-Medium.woff') format('woff'), url('../fonts/Roboto-Medium.ttf') format('truetype'), url('../fonts/Roboto-Medium.svg#SFUFutura') format('svg');
+  font-weight: bold;
+}
+/*--------End add Font Roboto---------*/
+body,
+.ms-WPBody {
+  font-family: "Roboto", Arial !important;
+  font-size: 14px;
+  line-height: normal;
+  line-height: 20px;
+  font-weight: normal;
+  background: #f6f6f6;
+  color: #393939;
+}
+.login-canvas {
+  position: absolute;
+  background: #0b3075;
+  height: 100%;
+  padding: 40px;
+  width: 100%;
+}
+.login-canvas .bg {
+  background-image: url("../img/bg-banner.jpg");
+  background-position: center;
+  background-size: cover;
+  opacity: 0.08;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  left: 0px;
+  bottom: 0px;
+}
+.login-canvas .logo {
+  text-align: center;
+  margin-bottom: 10px;
+  position: relative;
+  z-index: 2;
+}
+.login-canvas .logo img {
+  height: 80px;
+  display: inline-block;
+}
+.login-canvas .login-form {
+  max-width: 420px;
+  margin: 0px auto;
+  background: #fff;
+  border-radius: 0px;
+  position: relative;
+  z-index: 2;
+  padding: 10px;
+  box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.3);
+}
+.login-canvas .login-form .panel-heading {
+  font-size: 20px;
+  font-weight: 500;
+  padding: 10px 10px;
+  padding-top: 0px;
+  text-align: center;
+}
+.login-canvas .login-form .panel-body {
+  padding: 20px 30px;
+}
+.login-canvas .login-form .form-control {
+  border-radius: 2px;
+  height: auto;
+  padding: 10px 10px;
+  padding-left: 35px;
+  box-shadow: none;
+}
+.login-canvas .login-form .input {
+  position: relative;
+}
+.login-canvas .login-form .input .icon {
+  width: 30px;
+  height: 30px;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  margin: auto;
+  text-align: center;
+  line-height: 30px;
+  opacity: 0.6;
+  position: absolute;
+  border-right: 1px solid #ddd;
+}
+.login-canvas .login-form .actions {
+  margin: 20px 0px;
+}
+.login-canvas .login-form .btn-submit {
+  width: 100%;
+  padding: 10px;
+  display: block;
+  border-radius: 3px;
+  background: #1976D2;
+  color: #fff;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.login-canvas .login-form .btn-submit:hover {
+  background: #153673;
+}
+.login-canvas .login-form .bottom {
+  text-align: center;
+  margin-top: 20px;
+}
+.login-canvas .login-form .bottom .btn-reg {
+  padding: 10px;
+  border-radius: 3px;
+  border: 1px solid #1E88E5;
+  width: 100%;
+  display: block;
+  color: #1E88E5;
+  font-weight: 500;
+  margin-top: 10px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.login-canvas .login-form .bottom .btn-reg:hover {
+  background: #1E88E5;
+  color: #fff;
+}

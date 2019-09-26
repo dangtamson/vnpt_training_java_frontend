@@ -1,0 +1,127 @@
+/*Login*/
+@import url(less/config.less);
+@import url(less/vars.less);
+@import url(less/font.less);
+body,.ms-WPBody {
+    font-family: "Roboto",Arial !important;
+    font-size: 14px;
+    line-height: normal;
+    line-height: 20px;
+    font-weight: normal;
+    background: #f6f6f6;
+    color:#393939;
+}
+.login-canvas{
+    position: absolute;
+    background: #0b3075;
+    height: 100%;
+    padding: 40px;
+    
+	width: 100%;
+    .bg{
+        background-image: url("../img/bg-banner.jpg");
+        background-position: center;
+        background-size: cover;
+        opacity: 0.08;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        left: 0px;
+        bottom: 0px;
+    }
+    .logo{
+        text-align: center;
+        margin-bottom: 10px;
+        position: relative;
+        z-index: 2;
+        img{
+            height: 80px;
+            display: inline-block;
+        }
+    }
+    .login-form{
+    	max-width: 420px;
+    	margin: 0px auto;
+    	background: #fff;
+    	border-radius: 0px;
+        position: relative;
+        z-index: 2;
+        padding:10px;
+    	box-shadow: 0px 3px 7px fade(#000,30);
+        .panel-heading{
+            font-size: 20px;
+            font-weight: 500;
+            padding: 10px 10px;
+            padding-top:0px;
+            text-align: center;
+
+        }
+        .panel-body{
+            padding: 20px 30px;
+        }
+        .form-control{
+            border-radius: 2px;
+            height: auto;
+            padding: 10px 10px;
+            padding-left: 35px;
+            box-shadow: none;
+
+
+        }
+        .input{
+            position: relative;
+            .icon{
+                width: 30px;
+                height: 30px;
+                top: 0px;
+                bottom: 0px;
+                left: 0px;
+                margin: auto;
+                text-align: center;
+                line-height: 30px;
+                opacity: 0.6;
+                position: absolute;
+                border-right: 1px solid #ddd;
+
+            }
+        }
+        .actions{
+            margin:20px 0px;
+        }
+        .btn-submit{
+            width: 100%;
+            padding: 10px;
+            display: block;
+            border-radius: 3px;
+            background: @second;
+            color:#fff;
+            font-weight: 500;
+            text-transform: uppercase;
+            &:hover{
+                background: @main;
+            }
+
+        }
+        .bottom{
+            text-align: center;
+            margin-top: 20px;
+            .btn-reg{
+                padding: 10px;
+                border-radius: 3px;
+                border: 1px solid @info;
+                width: 100%;
+                display: block;
+                color: @info;
+                font-weight:500;
+                margin-top: 10px;
+                text-transform: uppercase;
+                font-weight: bold;
+                &:hover{
+                    background: @info;
+                    color: #fff;
+                }
+            }
+        }
+
+    }
+}

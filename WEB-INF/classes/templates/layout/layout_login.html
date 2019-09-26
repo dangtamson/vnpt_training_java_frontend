@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout">
+
+<head>
+<meta content="width=device-width, initial-scale=1" name="viewport" id="viewport"></meta>
+<meta content="900" http-equiv="refresh">
+<meta content="IE=edge" http-equiv="X-UA-Compatible" />
+<link type="text/css" rel='stylesheet'
+	href="/patientweb/public/skinmedic/vendor/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="/patientweb/public/skinmedic/vendor/slick/slick.css">
+<link rel="stylesheet" href="/patientweb/public/skinmedic/vendor/ap8/css/style.css">
+<link type="text/css" rel='stylesheet'
+	href="/patientweb/public/skinmedic/vendor/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css"
+	href="/patientweb/public/skinmedic/css/style.min.css">
+<script type="text/javascript" src="/patientweb/public/skinmedic/vendor/jquery/jquery.2.1.1.min.js"></script>
+<script type="text/javascript" src="/patientweb/public/js/configs/ConfigLabel.js"></script>
+<script type="text/javascript" src="/patientweb/public/js/configs/ConfigApp.js"></script>
+<script type="text/javascript" src="/patientweb/public/js/configs/ConfigApi.js"></script>
+<script type="text/javascript" src="/patientweb/public/js/core/ControlHelper.js"></script>
+<script type="text/javascript" src="/patientweb/public/js/core/ApiHelper.js"></script>
+<script type="text/javascript" src="/patientweb/public/js/core/AuthenHelper.js"></script>
+<script>
+	$(window).ready(function () {
+		var link = document.querySelector("link[rel*='icon']") || document.createElement('link');
+		link.type = 'image/x-icon';
+		link.rel = 'shortcut icon';
+		link.href = 'http://www.stackoverflow.com/favicon.ico';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	})
+</script>
+</head>
+
+<body>
+
+	<div class="content">
+		<!--  Menu content -->
+		<div layout:fragment="content"></div>
+	</div>
+
+</body>
+
+</html>

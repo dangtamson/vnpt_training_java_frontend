@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorator="layout/main">
+
+<head>
+	<meta charset="utf-8" />
+	<title>Đơn vị tính</title>
+	<script type="text/javascript" th:src="@{/public/js/model/DmDonViTinh.js}"></script>
+	<script type="text/javascript" th:src="@{/public/js/app/danhmuc/DmDonViTinhView.js}"></script>
+	<script type="text/javascript">
+		var oDmDonViTinhView = new DmDonViTinhView();
+	</script>
+</head>
+
+<body>
+	<div layout:fragment="content">
+		<div class="main-content">
+			<div class="row">
+				<div class="col-md-4 col-sm-12 col-xs-12">
+					<div class="box" style="min-height: calc(100vh - 170px);" id="DanhSachBenhNhan">
+						<div class="box-head" style="border-bottom: 1px solid #eaebec;">
+							<div class="title">Thông tin đơn vị tính</div>
+						</div>
+						<div class="box-body">
+							<div class="list-buttons ACTIONS">
+								<div class="button-group">
+									<button type="button" class="btn btn-primary btn-sm" id="btnAddNew"
+										disabled="disabled">
+										<i class="fa fa-plus"></i> Thêm mới
+									</button>
+									<button type="button" class="btn btn-primary btn-sm" id="btnEdit"
+										disabled="disabled">
+										<i class="fa fa-edit"></i> Sửa
+									</button>
+									<button type="button" class="btn btn-primary btn-sm" id="btnSave"
+										disabled="disabled">
+										<i class="fa fa-save"></i> Lưu
+									</button>
+									<button type="button" class="btn btn-primary btn-sm" id="btnDelete"
+										disabled="disabled">
+										<i class="fa fa-trash"></i> Xóa
+									</button>
+									<button type="button" class="btn btn-primary btn-sm" id="btnCancel"
+										disabled="disabled">
+										<i class="fa fa-remove"></i> Hủy
+									</button>
+								</div>
+							</div>
+							<div class="FORM box-form">
+								<div class="col-sm-12 col-xs-12">
+									<div class="form-group">
+										<div class="label-text">Mã đơn vị tính <span class="required">(*)</span></div>
+										<input type="text" class="form-control" placeholder="" id="ma">
+									</div>
+								</div>
+								<div class="col-sm-12 col-xs-12">
+									<div class="form-group">
+										<div class="label-text">Tên đơn vị tính <span class="required">(*)</span></div>
+										<input type="text" class="form-control" placeholder="" id="ten">
+									</div>
+								</div>
+								<div class="col-sm-12 col-xs-12">
+									<div class="form-group">
+										<div class="label-text">Ghi chú </div>
+										<input type="text" class="form-control" placeholder="" id="ghichu">
+									</div>
+								</div>
+								<div class="form-group">
+									<div class="label-text">Trạng thái</div>
+									<div class="select-custom">
+										<select id="trangthai" class="form-control">
+											<option value="1">Hoạt động</option>
+											<option value="0">Khóa</option>
+										</select>
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-8 col-sm-12 col-xs-12">
+					<div class="box" style="min-height: calc(100vh - 170px);">
+						<div class="box-head" style="border-bottom: 1px solid #eaebec;">
+							<div class="title">Danh sách đơn vị tính</div>
+						</div>
+						<div class="box-body">
+							<table class="table dataTable" id="Grid01">
+								<thead>
+									<th style="width:20px;text-align: center;">#</th>
+									<th>Mã đơn vị tính</th>
+									<th>Tên đơn vị tính</th>
+									<th>Ghi chú</th>
+									<th>Trạng thái</th>
+								</thead>
+								<tbody>
+								
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
