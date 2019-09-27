@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout">
+
+<head>
+	<title>VnCare | Booking</title>
+    <meta charset="utf-8" />
+    <meta name="keywords" content="medic, medic247" />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible"></meta>
+    <meta content="width=device-width, initial-scale=1" name="viewport" id="viewport"></meta>
+    <meta content="Phần mềm quản lý phòng khám" name="description">
+    <meta content="900" http-equiv="refresh">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible"></meta>
+    <meta content="width=device-width, initial-scale=1" name="viewport" id="viewport"></meta>
+    <meta content="index, follow" name="ROBOTS">
+
+    <!-- Bootstrap css -->
+	<link type="text/css" rel='stylesheet'
+    th:href="@{/public/templates/medic247/vendor/bootstrap/css/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{/public/templates/medic247/vendor/slick/slick.css}">
+<!-- End Bootstrap css -->
+<!-- Fontawesome css -->
+<link type="text/css" rel='stylesheet' th:href="@{/public/templates/medic247/vendor/font-awesome/css/font-awesome.min.css}">
+<!-- Font Icon Ap css -->
+
+<script type="text/javascript" th:src="@{/public/templates/medic247/vendor/jquery/jquery.2.1.1.min.js}"></script>
+	<script type="text/javascript" th:src="@{/public/templates/medic247/vendor/bootstrap/js/bootstrap.min.js}"></script>
+	<script type="text/javascript" th:src="@{/public/libs/datatable/js/jquery.dataTables.min.js}"></script>
+	<script type="text/javascript" th:src="@{/public/libs/datatable/js/dataTables.bootstrap.js}"></script>
+	<script type="text/javascript" th:src="@{/public/libs/datatable/js/fnAddTr.js}"></script>
+	<script type="text/javascript" th:src="@{/public/libs/select2/select2.min.js}"></script>
+	<script type="text/javascript" th:src="@{/public/libs/jquery-ui-1.12.1.custom/jquery-ui.min.js}"></script>
+	<link th:href="@{/public/libs/bootstrap-datetimepicker/bootstrap-datetimepicker.min.css}" rel="stylesheet" media="screen">
+    <script type="text/javascript" th:src="@{/public/libs/bootstrap-datetimepicker/moment.js}"></script>
+	<script type="text/javascript" th:src="@{/public/libs/bootstrap-datetimepicker/bootstrap-datetimepicker.min.js}"></script>
+	<script type="text/javascript" th:src="@{/public/libs/daterangepicker/daterangepicker.js}"></script>
+    <script type="text/javascript" th:src="@{/public/libs/fullcalendar/fullcalendar.min.js}"></script>
+    <script type="text/javascript" th:src="@{/public/libs/fullcalendar/locale-all.js}"></script>
+    <script type="text/javascript" th:src="@{/public/libs/bootstrap-datepicker/js/bootstrap-datepicker.min.js}"></script>
+    <script type="text/javascript" th:src="@{/public/libs/bootstrap-timepicker/js/bootstrap-timepicker.js}"></script>
+
+    <link rel="stylesheet" type="text/css" th:href="@{/public/templates/medic247/css/booking.css}">
+    <script type="text/javascript" th:src="@{/public/js/configs/ConfigApp.js}"></script>
+    <script type="text/javascript" th:src="@{/public/js/core/ApiHelper.js}"></script>
+    <script type="text/javascript" th:src="@{/public/libs/utils/Util.js}"></script>
+   
+<script>
+    var DATA = ApiHelper.Data;
+    var AUTH = ApiHelper.Authen;
+	$(window).ready(function () {
+		var link = document.querySelector("link[rel*='icon']") || document.createElement('link');
+		link.type = 'image/x-icon';
+		link.rel = 'shortcut icon';
+		link.href = 'http://www.stackoverflow.com/favicon.ico';
+        document.getElementsByTagName('head')[0].appendChild(link);
+        
+        $('.wec-control-date').datetimepicker({ locale: 'vi', format: 'DD/MM/YYYY', useCurrent: false });
+		$('.wec-control-datetime').datetimepicker({ locale: 'vi', format: 'DD/MM/YYYY HH:mm', useCurrent: false });
+	})
+</script>
+</head>
+
+<body>
+    <header>
+        <div th:replace="modules/booking_header :: booking_header"></div>
+    </header>
+	<div class="content">
+		<!--  Menu content -->
+		<div layout:fragment="content"></div>
+	</div>
+
+</body>
+
+</html>

@@ -4,11 +4,11 @@ const CONFIG_APP = {
 		CONTEXT : '/vnpt'
 		,HOME:'/app/common/dashboard'
 		,LOGIN:'/vnpt/app/common/login'
-		,LOGOUT:'http://103.9.77.49/medicauthen/app/common/logout'
+		,LOGOUT:''
 		,CHECK_TOKEN:'ht_token/check'
 	},
 	API:{
-		AUTHEN:'http://103.9.77.49/medicauthen/api/v1/public/auth/signin'
-		,DATA:'http://103.9.77.49:8083/data/api/v1.0/data'
+		AUTHEN:'http://localhost:8088/data/api/v1/public/auth/signin'
+		,DATA:'http://localhost:8088/data/api/v1.0/data'
 	}
 }

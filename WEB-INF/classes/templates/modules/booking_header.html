@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="utf-8" />
+
+</head>
+
+<body>
+	<div th:fragment="booking_header">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-3"><a href="/vnpt/app/booking/danhsach"><img class="logo-header" th:src="@{/public/templates/medic247/img/bookingcare_white.png}"
+							alt="BookingCare/"></a></div>
+				<div class="col-sm-5 hidden-xs text-right">
+					<ul class="nav-header">
+						<li><a href="/vnpt/app/booking/danhsach"> Trang chủ
+							</a></li>
+						<li><a href="#">Dành cho bệnh nhân</a></li>
+						<li><a href="#">Dành cho bác sĩ</a></li>
+					</ul>
+				</div>
+				<div class="col-sm-4">
+					<div class="text-right mobile-top-link"><a class="btn btn-blue btn-xs"
+							href="/vnpt/app/common/login"> Đăng nhập
+						</a></div>
+					<ul class="nav-header text-right">
+						<li><a id="hotro_link"><span class="glyphicon glyphicon-question-sign"></span> Hỗ trợ
+							</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
