@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorator="layout/main">
+
+<head>
+	<meta charset="utf-8" />
+	<title>Danh mục | Bác sỹ</title>
+</head>
+
+<body>
+	<div layout:fragment="content">
+		<div class="main-content">
+			<div class="row">
+				<div class="col-md-4 col-sm-12 col-xs-12">
+					<div class="box" style="min-height: calc(100vh - 170px);" id="DanhSachBenhNhan">
+						<div class="box-head" style="border-bottom: 1px solid #eaebec;">
+							<div class="title">Thông tin bác sỹ</div>
+						</div>
+						<div class="box-body">
+							<div class="list-buttons ACTIONS">
+								<div class="button-group">
+									<button type="button" class="btn btn-primary btn-sm" id="btnSave"
+										disabled="disabled">
+										<i class="fa fa-save"></i> Lưu
+									</button>
+									<button type="button" class="btn btn-primary btn-sm" id="btnDelete"
+										disabled="disabled">
+										<i class="fa fa-trash"></i> Xóa
+									</button>
+									<button type="button" class="btn btn-primary btn-sm" id="btnCancel"
+										disabled="disabled">
+										<i class="fa fa-remove"></i> Hủy
+									</button>
+								</div>
+							</div>
+							<div class="FORM box-form">
+								<div class="col-sm-12 col-xs-12">
+									<div class="form-group">
+										<div class="label-text">Họ tên <span class="required">(*)</span></div>
+										<input type="text" class="form-control" placeholder="" id="hoten">
+									</div>
+								</div>
+								<div class="col-sm-12 col-xs-12">
+									<div class="form-group">
+										<div class="label-text">Ngày sinh <span class="required">(*)</span></div>
+										<input type="text" class="form-control wec-control-date" placeholder="dd/mm/yyyy" id="ngaysinh">
+									</div>
+								</div>
+								<div class="col-sm-12 col-xs-12">
+									<div class="form-group">
+										<div class="label-text">Chuyên khoa </div>
+										<input type="text" class="form-control" placeholder="" id="chuyenkhoa">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-8 col-sm-12 col-xs-12">
+					<div class="box" style="min-height: calc(100vh - 170px);">
+						<div class="box-head" style="border-bottom: 1px solid #eaebec;">
+							<div class="title">Danh sách bác sỹ</div>
+						</div>
+						<div class="box-body">
+							<table class="table dataTable" id="Grid01">
+								<thead>
+									<th style="width:20px;text-align: center;">#</th>
+									<th>Họ tên</th>
+									<th>Ngày sinh</th>
+									<th>Chuyên khoa</th>
+								</thead>
+								<tbody></tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
